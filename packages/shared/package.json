@@ -14,5 +14,8 @@
 		"esm",
 		"cjs"
 	],
-	"scripts": {}
+	"scripts": {
+		"clean": "rimraf ./esm ./cjs",
+		"build": "npm run clean && node ../../scripts/build.mjs"
+	}
 }

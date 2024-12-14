@@ -10,7 +10,8 @@
 	"description": "",
 	"scripts": {
 		"build:cli": "npm run build -w @only-code/cli",
-		"start:cli": "npm run start -w @only-code/cli"
+		"start:cli": "npm run start -w @only-code/cli",
+		"build": "lerna run build"
 	},
 	"devDependencies": {
 		"@rollup/plugin-alias": "^5.1.1",
@@ -21,6 +22,7 @@
 		"find-up": "^7.0.0",
 		"glob": "^11.0.0",
 		"lerna": "^8.1.9",
+		"rimraf": "^6.0.1",
 		"rollup": "^4.28.1",
 		"rollup-plugin-shebang-bin": "^0.1.0",
 		"typescript": "^5.7.2"

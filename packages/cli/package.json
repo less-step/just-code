@@ -16,7 +16,8 @@
 		"only-code": "bin/index.js"
 	},
 	"scripts": {
-		"build": "node scripts/build.mjs",
+		"clean": "rimraf ./bin",
+		"build": "npm run clean && node scripts/build.mjs",
 		"start": "node scripts/start.mjs"
 	},
 	"dependencies": {
