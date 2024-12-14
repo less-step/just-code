@@ -1,4 +1,4 @@
-node_modules/
-bin/
-cjs/
-esm/
+**/node_modules/
+**/bin/
+**/cjs/
+**/esm/
