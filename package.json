@@ -1,5 +1,5 @@
 {
-	"name": "less-step",
+	"name": "just-code",
 	"version": "1.0.0",
 	"keywords": [],
 	"workspaces": [
@@ -9,8 +9,8 @@
 	"license": "ISC",
 	"description": "",
 	"scripts": {
-		"build:cli": "npm run build -w @less-step/cli",
-		"start:cli": "npm run start -w @less-step/cli"
+		"build:cli": "npm run build -w @just-code/cli",
+		"start:cli": "npm run start -w @just-code/cli"
 	},
 	"devDependencies": {
 		"@rollup/plugin-alias": "^5.1.1",

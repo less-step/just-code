@@ -1,5 +1,5 @@
 {
-	"name": "@less-step/cli",
+	"name": "@just-code/cli",
 	"version": "1.0.0",
 	"description": "> TODO: description",
 	"author": "姜鑫 <1599925910@qq.com>",
@@ -9,13 +9,13 @@
 		"access": "public"
 	},
 	"bin": {
-		"less-step": "bin/index.js"
+		"just-code": "bin/index.js"
 	},
 	"scripts": {
 		"build": "node scripts/build.mjs",
 		"start": "node scripts/start.mjs"
 	},
 	"dependencies": {
-		"@less-step/shared": "^1.0.0"
+		"@just-code/shared": "^1.0.0"
 	}
 }
