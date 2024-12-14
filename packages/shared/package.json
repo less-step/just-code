@@ -10,5 +10,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"files": [
+		"esm",
+		"cjs"
+	],
 	"scripts": {}
 }

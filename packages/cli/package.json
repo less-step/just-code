@@ -8,6 +8,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"files": [
+		"bin",
+		"README.md"
+	],
 	"bin": {
 		"just-code": "bin/index.js"
 	},
