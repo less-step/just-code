@@ -9,8 +9,8 @@
 	"license": "ISC",
 	"description": "",
 	"scripts": {
-		"build:cli": "npm run build -w @just-code/cli",
-		"start:cli": "npm run start -w @just-code/cli"
+		"build:cli": "npm run build -w @only-code/cli",
+		"start:cli": "npm run start -w @only-code/cli"
 	},
 	"devDependencies": {
 		"@rollup/plugin-alias": "^5.1.1",

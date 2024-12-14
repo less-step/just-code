@@ -9,7 +9,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"paths": {
-			"@just-code/*": ["packages/*/lib"]
+			"@only-code/*": ["packages/*/lib"]
 		}
 	}
 }

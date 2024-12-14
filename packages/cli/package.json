@@ -1,5 +1,5 @@
 {
-	"name": "@just-code/cli",
+	"name": "@only-code/cli",
 	"version": "1.0.0",
 	"description": "> TODO: description",
 	"author": "姜鑫 <1599925910@qq.com>",
@@ -13,13 +13,13 @@
 		"README.md"
 	],
 	"bin": {
-		"just-code": "bin/index.js"
+		"only-code": "bin/index.js"
 	},
 	"scripts": {
 		"build": "node scripts/build.mjs",
 		"start": "node scripts/start.mjs"
 	},
 	"dependencies": {
-		"@just-code/shared": "^1.0.0"
+		"@only-code/shared": "^1.0.0"
 	}
 }

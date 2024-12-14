@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const shared = require('@just-code/shared');
+const shared = require('@only-code/shared');
 
 // TODO: DEMONSTRATE API
 ```

@@ -8,7 +8,7 @@ async function build() {
 		const bundle = await rollup({
 			input: "lib/index.ts", // 输入文件路径
 			plugins: [typescript(), resolve(), commonjs()],
-			external: [/^@just-code\/.*/],
+			external: [/^@only-code\/.*/],
 		});
 		// 输出配置
 		await bundle.write({

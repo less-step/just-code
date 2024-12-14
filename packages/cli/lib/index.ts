@@ -1,4 +1,4 @@
 #! /usr/bin/env node
-import shared from "@just-code/shared";
+import shared from "@only-code/shared";
 console.log(shared());
-console.log("less-step is created12345678");
+console.log("only-code is created");
