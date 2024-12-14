@@ -1,0 +1,21 @@
+{
+	"name": "@less-step/cli",
+	"version": "1.0.0",
+	"description": "> TODO: description",
+	"author": "姜鑫 <1599925910@qq.com>",
+	"homepage": "",
+	"license": "ISC",
+	"publishConfig": {
+		"access": "public"
+	},
+	"bin": {
+		"less-step": "bin/index.js"
+	},
+	"scripts": {
+		"build": "node scripts/build.mjs",
+		"start": "node scripts/start.mjs"
+	},
+	"dependencies": {
+		"@less-step/shared": "^1.0.0"
+	}
+}

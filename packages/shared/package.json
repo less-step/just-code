@@ -1,0 +1,14 @@
+{
+	"name": "@less-step/shared",
+	"version": "1.0.0",
+	"description": "> TODO: description",
+	"author": "姜鑫 <1599925910@qq.com>",
+	"homepage": "",
+	"license": "ISC",
+	"main": "cjs/index.js",
+	"module": "esm/index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {}
+}

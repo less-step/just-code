@@ -1,0 +1,28 @@
+{
+	"name": "less-step",
+	"version": "1.0.0",
+	"keywords": [],
+	"workspaces": [
+		"packages/*"
+	],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"scripts": {
+		"build:cli": "npm run build -w @less-step/cli",
+		"start:cli": "npm run start -w @less-step/cli"
+	},
+	"devDependencies": {
+		"@rollup/plugin-alias": "^5.1.1",
+		"@rollup/plugin-commonjs": "^28.0.1",
+		"@rollup/plugin-node-resolve": "^15.3.0",
+		"@rollup/plugin-typescript": "^12.1.1",
+		"@types/node": "^22.10.2",
+		"find-up": "^7.0.0",
+		"glob": "^11.0.0",
+		"lerna": "^8.1.9",
+		"rollup": "^4.28.1",
+		"rollup-plugin-shebang-bin": "^0.1.0",
+		"typescript": "^5.7.2"
+	}
+}
