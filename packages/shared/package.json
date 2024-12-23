@@ -14,6 +14,16 @@
 		"esm",
 		"cjs"
 	],
+	"exports": {
+		".": {
+			"require": "./cjs/index.js",
+			"import": "./esm/index.js"
+		},
+		"./types": {
+			"require": "./cjs/index.d.ts",
+			"import": "./esm/index.d.ts"
+		}
+	},
 	"scripts": {
 		"clean": "rimraf ./esm ./cjs",
 		"build": "npm run clean && node ../../scripts/build.mjs"

@@ -30,23 +30,29 @@ async function build() {
 			replacement: path.resolve(rootPath, pkg, "lib/index.ts"),
 		};
 	});
+	console.log(packageEntries);
 	// 动态配置 Rollup
 	const watcher = watch({
 		input: "lib/index.ts", // 输入文件路径
 		output: {
 			file: path.resolve(__dirname, "../bin/index.js"), // 输出到 bin/index.js
 			format: "cjs", // 输出格式：CommonJS
+			sourcemap: true,
 		},
 		plugins: [
-			typescript(),
-			resolve(),
-			commonjs(),
 			alias({
 				entries: packageEntries,
 			}),
+			typescript({
+				tsconfig: "./tsconfig.json",
+				declarationDir: "bin",
+			}),
+			// typescript({ tsconfig: "./tsconfig.build.json" }),
+			resolve(),
+			commonjs(),
 		],
 		watch: {
-			include: path.resolve(rootPath, "packages/*/lib/**"), // 监视 `src` 文件夹中的文件
+			include: path.resolve(rootPath, "packages/*/lib/**"), // 监视 `lib` 文件夹中的文件
 			exclude: ["node_modules/**", "bin/**", "dist/**", "cjs/**", "esm/**"], // 排除 `node_modules` 文件夹
 			chokidar: {
 				usePolling: true, // 使用轮询，这在某些开发环境下很有用（比如 Windows 环境）

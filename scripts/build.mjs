@@ -2,25 +2,48 @@ import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import { rollup } from "rollup";
+import path from "path";
+console.log(path.resolve(process.cwd(), "esm"));
 async function build() {
 	// 动态配置 Rollup
-	const bundle = await rollup({
+	const bundleCjs = await rollup({
 		input: "lib/index.ts", // 输入文件路径
-		plugins: [resolve(), commonjs(), typescript()],
+		plugins: [
+			resolve(),
+			commonjs(),
+			typescript({
+				declaration: true,
+				declarationDir: "cjs",
+			}),
+		],
 		external: [/^@only-code\/.*/],
 	});
-	// 输出配置
-	await bundle.write({
-		file: "cjs/index.js", // 输出文件路径
-		format: "cjs", // 输出格式
-		sourcemap: true, // 是否生成 sourcemap
+	// 输出 CommonJS 格式
+	await bundleCjs.write({
+		dir: "cjs",
+		format: "cjs",
+		sourcemap: true,
 	});
-	// 输出配置
-	await bundle.write({
-		file: "esm/index.js", // 输出文件路径
-		format: "cjs", // 输出格式
-		sourcemap: true, // 是否生成 sourcemap
+	console.log("cjs模块打包成功");
+	const bundleESM = await rollup({
+		input: "lib/index.ts", // 输入文件路径
+		plugins: [
+			resolve(),
+			commonjs(),
+			typescript({
+				declaration: true,
+				declarationDir: "esm",
+			}),
+		],
+		external: [/^@only-code\/.*/],
 	});
+	// 输出 ESM 格式
+	await bundleESM.write({
+		dir: "esm",
+		format: "esm",
+		sourcemap: true,
+	});
+	console.log("esm模块打包成功");
 }
 
 // 执行打包任务

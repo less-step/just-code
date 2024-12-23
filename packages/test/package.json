@@ -1,0 +1,29 @@
+{
+  "name": "@only-code/test",
+  "version": "1.0.1",
+  "description": "> TODO: description",
+  "author": "姜鑫 <1599925910@qq.com>",
+  "homepage": "https://github.com/less-step/just-code#readme",
+  "license": "ISC",
+  "main": "lib/test.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/less-step/just-code.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/test.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/less-step/just-code/issues"
+  }
+}

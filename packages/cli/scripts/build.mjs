@@ -6,7 +6,7 @@ async function build() {
 	// 动态配置 Rollup
 	const bundle = await rollup({
 		input: "lib/index.ts", // 输入文件路径
-		plugins: [typescript(), resolve(), commonjs()],
+		plugins: [typescript({ tsconfig: "./tsconfig.build.json" }), resolve(), commonjs()],
 		external: [/^@only-code\/.*/],
 	});
 	// 输出配置
@@ -15,6 +15,7 @@ async function build() {
 		format: "cjs", // 输出格式
 		sourcemap: true, // 是否生成 sourcemap
 	});
+	console.log("打包完成");
 }
 
 // 执行打包任务

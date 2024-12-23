@@ -1,13 +1,16 @@
 {
 	"compilerOptions": {
-		"target": "ES2020",
+		"target": "ESNext",
 		"module": "ESNext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"strict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
+		"declarationMap": true,
 		"forceConsistentCasingInFileNames": true,
+		"declaration": true,
 		"baseUrl": ".",
+		//typescript配置的paths并不会对rollup打包流程产生很大的影响，主要是可以改变ctrl+左键定位源码的位置
 		"paths": {
 			"@only-code/*": ["packages/*/lib"]
 		}

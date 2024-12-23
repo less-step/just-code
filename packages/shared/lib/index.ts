@@ -1,3 +1,3 @@
 export default function () {
-	return "Hello shared ts";
+	return "Hello shared ts1";
 }

@@ -18,7 +18,10 @@
 	"scripts": {
 		"clean": "rimraf ./bin",
 		"build": "npm run clean && node scripts/build.mjs",
-		"start": "node scripts/start.mjs"
+		"start": "npm run clean && node scripts/start.mjs",
+		"tsc:nodenext": "tsc --outDir ts-nodenext -p ./tsconfig.build.json ",
+		"tsc:esnext": "tsc --outDir ts-esnext -p ./tsconfig.json ",
+		"tsc:showConfig": "tsc --showConfig"
 	},
 	"dependencies": {
 		"@only-code/shared": "^1.0.1"
